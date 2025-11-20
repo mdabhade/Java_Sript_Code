@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products=[{name:"Saree",price:600,path:"https://rukminim2.flixcart.com/image/612/612/xif0q/sari/a/k/r/free-1401-salco-unstitched-original-imah2y4fehzhnkgg.jpeg?q=70",size:["s","m","l","xl","xxl"]},{name:"Black ready to wear Saree",price:800,path:"https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/d/x/8/xl-p216-du-cx-foxey-original-imahe5rue37vfwjr.jpeg?q=70",size:["s","m","l","xl","xxl"]},
+        {name:"Dress",price:1000,path:"https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/b/n/v/xxl-w-zip-k-314-rs-creations-original-imahde69njqb4ee9.jpeg?q=70",size:["s","m","l","xl","xxl"]}];
+        console.log(products);
+
+        for (let value of products) {
+        console.log(value);
+        document.write(`
+        <div> <img src="${value.path}" alt="image not found">
+            <h2>
+                ${value.price}
+                </h2>
+                <p>
+                    ${value.name}
+                    </p>
+                    <p>
+                    size [${value.size}]
+                    </p>
+                    </div>
+        `)
+        
+      }
+        
+    </script>
+    <style>
+        div{
+            float: left;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</body>
+</html>

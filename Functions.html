@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function loancalulater(p, n, r = 8) {
+        n = n * 12;
+        r = r / 12 / 100;
+        let emi = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
+        console.log(emi);
+      }
+      loancalulater(500000, 30, 7.5);
+      loancalulater(500000, 30);
+
+      function cel_To_fr(c) {
+        let f = (c * 9) / 5 + 32;
+        let k = c + 273.25;
+        console.log("Celsius to Fahrenheit: " + f);
+
+        console.log("Celsius to Kelvin: " + k);
+      }
+
+      cel_To_fr(100);
+
+      function sharecal(unit1, unit2, price1, price2) {
+        console.log(unit1 * price1);
+        console.log(unit2 * price2);
+
+        console.log(unit1 + unit2);
+        console.log((price1 + price2) / 2);
+        console.log((unit1 + price1) * (unit2 + price2));
+      }
+
+      sharecal(100, 100, 200, 300);
+    </script>
+  </body>
+</html>

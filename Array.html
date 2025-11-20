@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let brand = ["puma", "nike", "adidas", "tokyo"];
+      console.log(brand[0]);
+      // for of llop is used for iterate values one by one
+      for (let value of brand) {
+        console.log(value);
+        document.write(`
+          <li>
+            ${value}
+            </li>
+          `);
+      }
+
+      // for in loop is used for iterate indexNo one by one
+      for (let value in brand) {
+        console.log(value);
+      }
+    </script>
+  </body>
+</html>

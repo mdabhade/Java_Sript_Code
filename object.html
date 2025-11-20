@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products={name:"Men Black Shirt",price:500,path:"https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/a/e/y/m-pk21sh09g-surhi-original-imahhrz7ggbfzvx2.jpeg?q=70",size:["s","m","l","xl","xxl"]};
+        console.log(products);
+        console.log(products.name);
+        console.log(products["name"]);
+        document.write(`
+            <div>
+                <img src="${products.path}">
+                <h2>${products.price} </h2>
+                <p>${products.name}</p>
+             </div>`
+            )
+    </script>
+</body>
+</html>
