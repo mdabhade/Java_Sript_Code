@@ -21,5 +21,49 @@ document.getElementById("button").onclick = () => {
 
   let pincodereges = /^[1-9][0-9]{5}$/;
   let answerpincode = pincodereges.test(data4);
-  console.log(answerpincode);
+  // console.log(answerpincode);
+
+  let pancardreges = /^([a-zA-Z]{5})([0-9]{4})([a-zA-Z])$/;
+  let answerpancard = pancardreges.test(data3);
+  // console.log(answerpancard);
+
+  let mobilereges = /^([6-9])([0-9]{9})$/;
+  let answermobilereges = mobilereges.test(data2);
+  // console.log(answermobilereges);
+
+  let namereges = /^[a-zA-Z]([a-zA-Z ]+)?[A-Za-z]$/;
+  let answernamereges = namereges.test(data1);
+  // console.log(answernamereges);
+
+  let emailreges = /^([A-z0-9\._]+)@([A-z0-9\-]+)\.([A-z]{2,})(\.[A-z]{2,})?$/;
+
+  let answeremailreges = emailreges.test(data5);
+  //   console.log(answeremailreges);
+
+  let passwordreges =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[@#\-\.\$\^]).{4,8}$/;
+
+  let answerpasswordreges = passwordreges.test(data5);
+  //   console.log(answerpasswordreges);
+
+  let message = "";
+  if (!answernamereges) {
+    message = "invalid name";
+  } else if (!answermobilereges) {
+    message = "invalid mobile number";
+  } else if (!answerpancard) {
+    message = "invalid pancard";
+  } else if (!answerpincode) {
+    message = "invalid pincode";
+  } else if (!answeremailreges) {
+    message = "invalid email";
+  } else if (!answerpasswordreges) {
+    message = "invalid password";
+  } else {
+    message = "registration successfuly completed";
+  }
+  document.querySelector("#errormsg").innerHTML = message;
+
+  // escape character "" using\
+  console.log('hello "manisha"');
 };
